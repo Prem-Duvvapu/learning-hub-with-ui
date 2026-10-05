@@ -1,0 +1,9 @@
+{
+  "name": "learning-hub-with-ui",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build.mjs"
+  }
+}

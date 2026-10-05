@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One starting point for hands-on computer science: algorithms, low-level design, high-level design, and CS fundamentals.">
+  <meta name="theme-color" content="#f5f5ee">
+  <title>Learning Hub — Build understanding, one experiment at a time</title>
+  <script src="./theme.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to learning paths</a>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">↗</span> Learning Hub<span class="brand-note">WITH UI</span></a>
+    <button id="theme-toggle" type="button" hidden aria-label="Switch to dark theme">Dark theme</button>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> FOUR SUBJECTS. ONE STARTING POINT.</p>
+        <h1 id="hero-title">Don't just read it.<br><em>Understand it.</em></h1>
+        <p class="intro">Trace an algorithm. Design an object. Explore a system.<br class="desktop-break"> Connect the ideas by learning through interaction.</p>
+        <a class="primary-link" href="#subjects">Find your next subject <span aria-hidden="true">↓</span></a>
+        <a class="quiet-link" href="#learning-path">Not sure where to start?</a>
+      </div>
+      <div class="concept-map" aria-hidden="true">
+        <div class="map-caption">THE BIG PICTURE</div>
+        <div class="map-node foundations"><small>01 / FOUNDATIONS</small><strong>How it works</strong><span>OS · Networks · Databases</span></div>
+        <div class="map-connector">↓</div>
+        <div class="map-pair"><div class="map-node"><small>02 / ALGORITHMS</small><strong>Solve the problem</strong></div><div class="map-node"><small>03 / OBJECT DESIGN</small><strong>Structure the code</strong></div></div>
+        <div class="map-connector">↓</div>
+        <div class="map-node systems"><small>04 / SYSTEM DESIGN</small><strong>See the whole system</strong><span>Requests · Capacity · Trade-offs</span></div>
+        <div class="map-footnote">Small experiments. Connected understanding.</div>
+      </div>
+    </section>
+    <aside id="recent" class="recent" hidden aria-label="Last opened subject">
+      <div><span class="eyebrow">PICK UP YOUR EXPLORATION</span><p>Last opened from this hub: <strong id="recent-name"></strong></p></div>
+      <a id="recent-link" class="secondary-link">Open subject <span aria-hidden="true">↗</span></a>
+    </aside>
+    <section id="subjects" aria-labelledby="subjects-title">
+      <div class="section-heading"><div><p class="eyebrow">CHOOSE YOUR FOCUS</p><h2 id="subjects-title">What do you want to understand?</h2></div><p>Each subject opens in this tab.<br>Your browser's Back button brings you here.</p></div>
+      <div class="subject-grid">
+        <a class="subject-card" data-subject="dsa" href="https://dsa-with-ui.vercel.app/">
+          <div class="card-top"><span class="subject-symbol" aria-hidden="true">[ ↗ ]</span><span class="card-index">01 / DSA</span></div>
+          <h3>Data structures<br>&amp; algorithms</h3><p>Make the invisible steps visible. Follow how data moves and how an algorithm reaches its answer.</p>
+          <ul><li>Step-by-step exploration</li><li>Problem-solving practice</li></ul>
+          <span class="card-cta">Explore algorithms <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="subject-card" data-subject="lld" href="https://lld-with-ui.vercel.app/">
+          <div class="card-top"><span class="subject-symbol" aria-hidden="true">{ ⋈ }</span><span class="card-index">02 / LLD</span></div>
+          <h3>Low-level<br>design</h3><p>Turn requirements into working objects. Explore responsibilities, relationships, and real design decisions.</p>
+          <ul><li>Interactive application modules</li><li>Design patterns &amp; diagrams</li></ul>
+          <span class="card-cta">Explore object design <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="subject-card" data-subject="hld" href="https://hld-with-ui.vercel.app/">
+          <div class="card-top"><span class="subject-symbol" aria-hidden="true">□ → □</span><span class="card-index">03 / HLD</span></div>
+          <h3>High-level<br>design</h3><p>Zoom out from code to systems. Change the inputs and explore requests, capacity, and architectural trade-offs.</p>
+          <ul><li>System simulations</li><li>Capacity &amp; reliability trade-offs</li></ul>
+          <span class="card-cta">Explore systems <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="subject-card" data-subject="cs" href="https://cs-fundamentals-with-ui.vercel.app/">
+          <div class="card-top"><span class="subject-symbol" aria-hidden="true">⌘</span><span class="card-index">04 / FOUNDATIONS</span></div>
+          <h3>CS<br>fundamentals</h3><p>Build the mental models behind the code. Connect operating systems, networks, databases, and programming concepts.</p>
+          <ul><li>Concepts with visual explanations</li><li>A foundation for every other subject</li></ul>
+          <span class="card-cta">Explore fundamentals <span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+    </section>
+    <section id="learning-path" class="learning-path" aria-labelledby="path-title">
+      <div><p class="eyebrow">A LITTLE DIRECTION</p><h2 id="path-title">New here?<br>Start with the foundations.</h2><p>A suggested order, not a requirement.<br>Jump into whichever subject you need today.</p></div>
+      <ol>
+        <li><span>01</span><div><a href="https://cs-fundamentals-with-ui.vercel.app/" data-subject="cs">CS fundamentals →</a><p>Understand what runs underneath your code.</p></div></li>
+        <li><span>02</span><div><a href="https://dsa-with-ui.vercel.app/" data-subject="dsa">Data structures &amp; algorithms →</a><p>Learn to reason about problems and efficiency.</p></div></li>
+        <li><span>03</span><div><a href="https://lld-with-ui.vercel.app/" data-subject="lld">Low-level design →</a><p>Organize behavior into maintainable objects.</p></div></li>
+        <li><span>04</span><div><a href="https://hld-with-ui.vercel.app/" data-subject="hld">High-level design →</a><p>Connect components and explore system trade-offs.</p></div></li>
+      </ol>
+    </section>
+    <div class="honest-note"><strong>One doorway. Four independent learning apps.</strong><p>This hub connects the existing projects; it doesn't combine their accounts, themes, or progress. Any saved learning state stays with its original app.</p></div>
+  </main>
+  <footer><span>Learning Hub / Built for understanding.</span><a href="https://github.com/Prem-Duvvapu/learning-hub-with-ui">View source on GitHub ↗</a></footer>
+</body>
+</html>
