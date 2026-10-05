@@ -2,7 +2,7 @@
 
 One starting point for four independently deployed interactive learning apps.
 
-Live: https://prem-duvvapu.github.io/learning-hub-with-ui/
+Intended deployment: https://learning-hub-with-ui.vercel.app/
 
 | Subject | Existing app |
 | --- | --- |
@@ -24,9 +24,22 @@ npm test
 npm run build
 ```
 
-The build copies four static assets to `dist/`. Relative asset URLs support
-the GitHub Pages project subpath. GitHub Actions tests PRs and deploys main
-after a passing build. Repository Pages uses GitHub Actions as its source.
+The build copies four static assets to `dist/`. GitHub Actions runs tests and
+builds; Vercel handles hosting, like the four existing apps.
+
+## Deploy on Vercel
+
+1. Import `Prem-Duvvapu/learning-hub-with-ui` as a new Vercel project.
+2. Keep the root directory as the repository root.
+3. Use framework preset **Other**. The committed `vercel.json` sets the build
+   command to `npm run build` and output directory to `dist`.
+4. Deploy the `main` branch. No environment variables or backend are required.
+5. Confirm the production URL is `https://learning-hub-with-ui.vercel.app`
+   before merging the sibling apps' return links. If Vercel assigns another
+   domain, update those links and their tests first.
+
+Relative assets also support preview deployments and subpath hosting. The hub
+does not require SPA rewrites: its sections are ordinary anchors on one page.
 
 ## Accessibility and privacy
 
