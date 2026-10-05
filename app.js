@@ -15,7 +15,7 @@ themeButton.addEventListener('click', () => {
 
 const subjects = new Map([...document.querySelectorAll('.subject-card')].map(card => [
   card.dataset.subject,
-  { href: card.href, name: card.querySelector('h3').textContent.replace(/\s+/g, ' ').trim() },
+  { href: card.href, name: card.querySelector('h3').innerText.replace(/\s+/g, ' ').trim() },
 ]));
 const showRecent = () => {
   let lastSubject;
