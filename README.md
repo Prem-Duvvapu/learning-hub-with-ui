@@ -44,9 +44,26 @@ does not require SPA rewrites: its sections are ordinary anchors on one page.
 ## Accessibility and privacy
 
 Responsive cards, skip navigation, visible keyboard focus, 44px controls,
-light/dark themes, and reduced-motion support. No analytics, third-party scripts,
-cookies, embedded apps, or authentication. Optional localStorage keys:
+light/dark themes, and reduced-motion support. Vercel Web Analytics collects
+visitor and page-view statistics using its hosted script. No embedded apps or
+authentication. Optional localStorage keys:
 `learning-hub-theme` and `learning-hub-last-subject`.
+
+### Visitor analytics
+
+The hub uses Vercel's static HTML integration, loading
+`/_vercel/insights/script.js` with `defer`. No React component or npm package is
+needed. See the [Vercel setup guide](https://vercel.com/docs/analytics/quickstart).
+
+1. Enable **Web Analytics** for `learning-hub-with-ui` in the Vercel dashboard.
+2. Deploy the updated `main` branch after enabling analytics.
+3. Visit the deployed hub and check the browser Network panel for the analytics
+   script and a page-view request, then check the Vercel Analytics dashboard.
+
+Analytics records visits to the hub, not visits inside the four independent apps.
+The analytics endpoint is supplied by Vercel and is unavailable on a plain local
+static server; navigation and themes still work when analytics is blocked or
+unavailable. No custom events are configured.
 
 To change a destination, update both links in `index.html`, the contract test,
 and `LearningNetworkNav` in each sibling app. The recent-subject destination
