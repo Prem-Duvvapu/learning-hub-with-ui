@@ -70,3 +70,11 @@ and `LearningNetworkNav` in each sibling app. The recent-subject destination
 comes from the catalog, never a stored URL. Browser-level verification should
 cover same-tab navigation, Back, both themes, blocked storage, keyboard access,
 and narrow screens.
+
+## License
+
+This project's original code and documentation are licensed under the [MIT License](LICENSE).
+Copyright (c) 2026 Prem Duvvapu.
+
+Third-party dependencies and materials remain subject to their own licenses and notices;
+the project license does not replace those terms.
